@@ -1,4 +1,9 @@
 class ItemsController < ApplicationController
+  
+  def item_params
+    params.require(:user).permit(:piggybak_sellable_attributes)
+  end
+
   def index
     @items = Item.all
   end
@@ -26,6 +31,15 @@ class ItemsController < ApplicationController
     item_to_delete = Item.find(params[:id])
     item_to_delete.destroy
     redirect_to '/items'
+  end
+
+  def show
+    @item = Item.find(params[:id])
+
+    respond_to do |format|
+        format.html # show.html.erb
+        format.xml { render :xml => @item }
+    end
   end
 
 end

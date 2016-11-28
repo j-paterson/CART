@@ -1,13 +1,13 @@
 Rails.application.routes.draw do
-  devise_for :users
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-  get '/cart' => 'cart#index'
+  mount Piggybak::Engine => '/checkout', as: 'piggybak'
 
-  # devise_for :users, :controllers => { registrations: 'registrations' }, except: :
+  devise_for :users, :controllers => { registrations: 'registrations' }
   resources :items
   resources :users, except: :new
   resources :categories
   resources :subcategories
+  resources :carts
   get 'items/new', to: 'items#new'
   post 'items/create', to: 'items#create'
   patch 'new', to: 'items#new'
