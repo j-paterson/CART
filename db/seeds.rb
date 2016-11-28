@@ -25,45 +25,51 @@ fruit = Subcategory.find_or_create_by(name: 'Fruit')
 vegetables = Subcategory.find_or_create_by(name: 'Vegetables')
 
 
-Item.find_or_create_by(name: "Striped Shirt", 
-	description: 
+Item.find_or_create_by(name: "Striped Shirt",
+	description:
 	'60% Polyester, 40% Cotton',
 	price: 15.73,
 	user: john,
 	subcategory: shirts
 	)
-Item.find_or_create_by(name: "Dotted Shirt", 
-	description: 
+Item.find_or_create_by(name: "Dotted Shirt",
+	description:
 	'60% Polyester, 40% Cotton',
 	price: 15.73,
 	user: john,
 	subcategory: shirts
 	)
-Item.find_or_create_by(name: "Plain Shirt", 
-	description: 
+Item.find_or_create_by(name: "Plain Shirt",
+	description:
 	'60% Polyester, 40% Cotton',
 	price: 15.73,
 	user: john,
 	subcategory: shirts
 	)
-Item.find_or_create_by(name: "Grey Jeans", 
-	description: 
+Item.find_or_create_by(name: "Grey Jeans",
+	description:
 	'60% Polyester, 40% Cotton',
 	price: 15.73,
 	user: john,
 	subcategory: pants
 	)
-Item.find_or_create_by(name: "Carrot", 
-	description: 
+Item.find_or_create_by(name: "Carrot",
+	description:
 	'Organic!',
 	price: 15.73,
 	user: john,
 	subcategory: vegetables
 	)
-Item.find_or_create_by(name: "Apple", 
-	description: 
+Item.find_or_create_by(name: "Apple",
+	description:
 	'Crisp and Juicy!',
 	price: 15.73,
 	user: john,
 	subcategory: fruit
 	)
+
+OrderStatus.delete_all
+OrderStatus.create! id: 1, name: "In Progress"
+OrderStatus.create! id: 2, name: "Placed"
+OrderStatus.create! id: 3, name: "Shipped"
+OrderStatus.create! id: 4, name: "Cancelled"

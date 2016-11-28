@@ -15,6 +15,8 @@
 				<li><%= link_to "Sign In", new_user_session_path, :method => :get %></li>
 				<li><%= link_to "Sign up", new_user_registration_path, :method => :get %></li>
 			<% end %>
+
+			<li><%= link_to "#{current_order.order_items.size} Items in Cart ( #{number_to_currency current_order.subtotal} )", cart_path, class: "btn btn-link" %></li>
 		</ul>
 	</div>
 </header>
