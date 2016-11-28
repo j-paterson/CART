@@ -16768,3 +16768,438 @@ Processing by HomeController#index as HTML
   Rendered layouts/_header.html.erb (2.7ms)
   Rendered layouts/_footer.html.erb (0.0ms)
 Completed 200 OK in 90ms (Views: 87.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin" for ::1 at 2016-11-28 13:52:39 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RailsAdmin::MainController#dashboard as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "carts"
+  [1m[36mCart Load (0.1ms)[0m  [1mSELECT  "carts".* FROM "carts"  ORDER BY "carts"."id" DESC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "categories"
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT  "categories".* FROM "categories"  ORDER BY "categories"."id" DESC LIMIT 1[0m
+  [1m[35m (0.8ms)[0m  SELECT COUNT(*) FROM "items"
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT  "items".* FROM "items"  ORDER BY "items"."id" DESC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "subcategories"
+  [1m[36mSubcategory Load (0.1ms)[0m  [1mSELECT  "subcategories".* FROM "subcategories"  ORDER BY "subcategories"."id" DESC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" DESC LIMIT 1[0m
+  Rendered /Users/jpat/.rvm/gems/ruby-2.2.0@rails_decal/bundler/gems/rails_admin-482b5ac4c3b6/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (35.5ms)
+  Rendered /Users/jpat/.rvm/gems/ruby-2.2.0@rails_decal/bundler/gems/rails_admin-482b5ac4c3b6/app/views/layouts/rails_admin/_secondary_navigation.html.haml (5.3ms)
+  Rendered /Users/jpat/.rvm/gems/ruby-2.2.0@rails_decal/bundler/gems/rails_admin-482b5ac4c3b6/app/views/layouts/rails_admin/_navigation.html.haml (15.0ms)
+  Rendered /Users/jpat/.rvm/gems/ruby-2.2.0@rails_decal/bundler/gems/rails_admin-482b5ac4c3b6/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (6.3ms)
+  Rendered /Users/jpat/.rvm/gems/ruby-2.2.0@rails_decal/bundler/gems/rails_admin-482b5ac4c3b6/app/views/layouts/rails_admin/pjax.html.haml (5.9ms)
+Completed 200 OK in 14302ms (Views: 13921.2ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/assets/rails_admin/rails_admin.self-6da4f7728a42c0873d30d061d1d05c2d7c6a6cca4a33b7ce31807e6d52a1c332.css?body=1" for ::1 at 2016-11-28 13:52:54 -0800
+
+
+Started GET "/assets/jquery.remotipart.self-1660679e325ee534ce863e680eb6ad0bc9739d262594dc1337a2171e5c19c939.js?body=1" for ::1 at 2016-11-28 13:52:54 -0800
+
+
+Started GET "/assets/jquery-ui/effect.self-3acdb29e7da09c8f0195b994d2f04d73bfef50dc539c84fd2c835d964d33e5c1.js?body=1" for ::1 at 2016-11-28 13:52:54 -0800
+
+
+Started GET "/assets/jquery.iframe-transport.self-b58640d2146e10a028d4aec4f1c6e624305f8b5edd02cbb5ca77f7fb56b4d976.js?body=1" for ::1 at 2016-11-28 13:52:54 -0800
+
+
+Started GET "/assets/jquery-ui/core.self-93be4d22eda916787802a64d8f88b52db8a9027d4ccbbc0942625324a7d12d44.js?body=1" for ::1 at 2016-11-28 13:52:54 -0800
+
+
+Started GET "/assets/jquery-ui/widget.self-c1602241ddc51216b58391768667068867b8e15b9efc722befcd25771eda6819.js?body=1" for ::1 at 2016-11-28 13:52:54 -0800
+
+
+Started GET "/assets/jquery-ui/mouse.self-c513294e8da73f31f84ba3ef11e2a1180a47faea0eb2fea4a53fc26153dd21fd.js?body=1" for ::1 at 2016-11-28 13:52:54 -0800
+
+
+Started GET "/assets/jquery-ui/sortable.self-df2d80a36f9dfbe0facc596ccd92af83ca50d38e4cd6a84810aaf5d40b8cd181.js?body=1" for ::1 at 2016-11-28 13:52:54 -0800
+
+
+Started GET "/assets/jquery-ui/position.self-e693ced4ecfa1a276f0b794f32c1d30d792764b08788bf68ecfa3b388c291333.js?body=1" for ::1 at 2016-11-28 13:52:54 -0800
+
+
+Started GET "/assets/jquery-ui/menu.self-7abc1c9401509a7e4fc609b1e461be6fd17e8116e8fda19cc59d05ba79aefb68.js?body=1" for ::1 at 2016-11-28 13:52:54 -0800
+
+
+Started GET "/assets/jquery-ui/autocomplete.self-3befc48aba87cead090cfd014562b2771a662ac6d2c8197b24c08b2d9f3d9f2d.js?body=1" for ::1 at 2016-11-28 13:52:54 -0800
+
+
+Started GET "/assets/rails_admin/jquery.colorpicker.self-65a540a6a8e61569a39a37bd1456543ae5e5bbe48868247372bed40a1dff2bcf.js?body=1" for ::1 at 2016-11-28 13:52:54 -0800
+
+
+Started GET "/assets/rails_admin/bootstrap-datetimepicker.self-9bf8b50ba86095fb5caaadd1ee11eaf661b3f4879f3ea5263d541e9804fd7b15.js?body=1" for ::1 at 2016-11-28 13:52:54 -0800
+
+
+Started GET "/assets/rails_admin/moment-with-locales.self-c29e385ac561ac8d380cf9a68428251c3dd6b6f0f05f6114c6ae7e8114678db8.js?body=1" for ::1 at 2016-11-28 13:52:54 -0800
+
+
+Started GET "/assets/rails_admin/ra.filtering-multiselect.self-bed24122f49a15537a73b85a4ada928d417938a0711400d96bb55e5edf6b40c6.js?body=1" for ::1 at 2016-11-28 13:52:54 -0800
+
+
+Started GET "/assets/rails_admin/ra.filtering-select.self-2e2b4b93869c61371d6deca3fb34c933848aa9dfc2562dfaae5fd0fcc77b72b0.js?body=1" for ::1 at 2016-11-28 13:52:54 -0800
+
+
+Started GET "/assets/rails_admin/jquery.pjax.self-aa02343d5b755c77fd76db8b2d2864cf2aebdba056b56e74b3b91f2e65207444.js?body=1" for ::1 at 2016-11-28 13:52:54 -0800
+
+
+Started GET "/assets/rails_admin/ra.remote-form.self-6ee31242b35c47eae247621696152697683860be737fcb9fc7705305736c9370.js?body=1" for ::1 at 2016-11-28 13:52:54 -0800
+
+
+Started GET "/assets/rails_admin/ra.nested-form-hooks.self-53f400a47e3ece2d820f34e4a9834b229c191801c55619003453eb45c864db04.js?body=1" for ::1 at 2016-11-28 13:52:54 -0800
+
+
+Started GET "/assets/rails_admin/ra.i18n.self-725ab24c454e18d4832f68df96ec4fffa6190faed5636160923a6d1162a1a0ba.js?body=1" for ::1 at 2016-11-28 13:52:54 -0800
+
+
+Started GET "/assets/jquery_nested_form.self-d38045d10ebdd28aac44152cb451796232091957b86b47bedad1ab171a3a12cd.js?body=1" for ::1 at 2016-11-28 13:52:54 -0800
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for ::1 at 2016-11-28 13:52:54 -0800
+
+
+Started GET "/assets/rails_admin/ra.filter-box.self-195103c2264434612da85f150286ad7ea0d279828a186070ba5db6506cd7b5e6.js?body=1" for ::1 at 2016-11-28 13:52:54 -0800
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for ::1 at 2016-11-28 13:52:54 -0800
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for ::1 at 2016-11-28 13:52:54 -0800
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for ::1 at 2016-11-28 13:52:54 -0800
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for ::1 at 2016-11-28 13:52:54 -0800
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for ::1 at 2016-11-28 13:52:54 -0800
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for ::1 at 2016-11-28 13:52:54 -0800
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for ::1 at 2016-11-28 13:52:54 -0800
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for ::1 at 2016-11-28 13:52:54 -0800
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for ::1 at 2016-11-28 13:52:54 -0800
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for ::1 at 2016-11-28 13:52:54 -0800
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for ::1 at 2016-11-28 13:52:54 -0800
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-typeahead.self-2621ced336904d375bef144d46edd9d304889e09c6559d64df325bbd10f4ce8a.js?body=1" for ::1 at 2016-11-28 13:52:54 -0800
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap.self-94f59a48294d99f8d9b7632cd5a1742670c7735fe37ec7c555aab939b635fdde.js?body=1" for ::1 at 2016-11-28 13:52:54 -0800
+
+
+Started GET "/assets/rails_admin/ra.widgets.self-b707ff6592e3d3359ef77e61d1161a0370c5663c303eb0a5cec459fbf1fa7229.js?body=1" for ::1 at 2016-11-28 13:52:54 -0800
+
+
+Started GET "/assets/rails_admin/ui.self-5f1671365225e7918e5bf4cb99fc38b189e81884fb859682f79a683f41ee19b7.js?body=1" for ::1 at 2016-11-28 13:52:54 -0800
+
+
+Started GET "/assets/rails_admin/custom/ui.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-11-28 13:52:54 -0800
+
+
+Started GET "/assets/rails_admin/rails_admin.self-ab9f3e5c71b96d0ca434851ecacc97b0fc3a0e8d96ab171916e9d5fdd10ef15b.js?body=1" for ::1 at 2016-11-28 13:52:54 -0800
+
+
+Started GET "/assets/fontawesome-webfont-2adefcbc041e7d18fcf2d417879dc5a09997aa64d675b7a3c4b6ce33da13f3fe.woff2" for ::1 at 2016-11-28 13:52:55 -0800
+
+
+Started GET "/admin/cart?_pjax=%5Bdata-pjax-container%5D" for ::1 at 2016-11-28 13:53:02 -0800
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"cart"}
+  [1m[35mCart Load (1.3ms)[0m  SELECT  "carts".* FROM "carts"  ORDER BY carts.id desc LIMIT 20 OFFSET 0
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "carts"[0m
+  Rendered /Users/jpat/.rvm/gems/ruby-2.2.0@rails_decal/bundler/gems/rails_admin-482b5ac4c3b6/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (141.6ms)
+Completed 200 OK in 333ms (Views: 188.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/admin/category?_pjax=%5Bdata-pjax-container%5D" for ::1 at 2016-11-28 13:53:04 -0800
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"category"}
+  [1m[35mCategory Load (0.3ms)[0m  SELECT  "categories".* FROM "categories"  ORDER BY categories.id desc LIMIT 20 OFFSET 0
+  [1m[36mSubcategory Load (0.3ms)[0m  [1mSELECT "subcategories".* FROM "subcategories" WHERE "subcategories"."category_id" = ?[0m  [["category_id", 2]]
+  [1m[35mSubcategory Load (0.1ms)[0m  SELECT "subcategories".* FROM "subcategories" WHERE "subcategories"."category_id" = ?  [["category_id", 1]]
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "categories"[0m
+  Rendered /Users/jpat/.rvm/gems/ruby-2.2.0@rails_decal/bundler/gems/rails_admin-482b5ac4c3b6/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (201.3ms)
+Completed 200 OK in 229ms (Views: 217.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/admin/item?_pjax=%5Bdata-pjax-container%5D" for ::1 at 2016-11-28 13:53:05 -0800
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"item"}
+  [1m[35mItem Load (0.2ms)[0m  SELECT  "items".* FROM "items"  ORDER BY items.id desc LIMIT 20 OFFSET 0
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IN (1)[0m
+  [1m[35mSubcategory Load (0.3ms)[0m  SELECT "subcategories".* FROM "subcategories" WHERE "subcategories"."id" IN (3, 4, 2, 1)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "items"[0m
+  Rendered /Users/jpat/.rvm/gems/ruby-2.2.0@rails_decal/bundler/gems/rails_admin-482b5ac4c3b6/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (162.9ms)
+Completed 200 OK in 201ms (Views: 178.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/admin/item?_pjax=%5Bdata-pjax-container%5D" for ::1 at 2016-11-28 13:53:06 -0800
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"item"}
+  [1m[35mItem Load (0.2ms)[0m  SELECT  "items".* FROM "items"  ORDER BY items.id desc LIMIT 20 OFFSET 0
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IN (1)[0m
+  [1m[35mSubcategory Load (0.2ms)[0m  SELECT "subcategories".* FROM "subcategories" WHERE "subcategories"."id" IN (3, 4, 2, 1)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "items"[0m
+  Rendered /Users/jpat/.rvm/gems/ruby-2.2.0@rails_decal/bundler/gems/rails_admin-482b5ac4c3b6/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (113.1ms)
+Completed 200 OK in 140ms (Views: 131.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/admin/subcategory?_pjax=%5Bdata-pjax-container%5D" for ::1 at 2016-11-28 13:53:07 -0800
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"subcategory"}
+  [1m[35mSubcategory Load (0.3ms)[0m  SELECT  "subcategories".* FROM "subcategories"  ORDER BY subcategories.id desc LIMIT 20 OFFSET 0
+  [1m[36mItem Load (0.4ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."subcategory_id" = ?[0m  [["subcategory_id", 4]]
+  [1m[35mItem Load (0.1ms)[0m  SELECT "items".* FROM "items" WHERE "items"."subcategory_id" = ?  [["subcategory_id", 3]]
+  [1m[36mItem Load (0.1ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."subcategory_id" = ?[0m  [["subcategory_id", 2]]
+  [1m[35mItem Load (0.2ms)[0m  SELECT "items".* FROM "items" WHERE "items"."subcategory_id" = ?  [["subcategory_id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "subcategories"[0m
+  Rendered /Users/jpat/.rvm/gems/ruby-2.2.0@rails_decal/bundler/gems/rails_admin-482b5ac4c3b6/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (74.6ms)
+Completed 200 OK in 110ms (Views: 95.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/admin/user?_pjax=%5Bdata-pjax-container%5D" for ::1 at 2016-11-28 13:53:07 -0800
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"user"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  ORDER BY users.id desc LIMIT 20 OFFSET 0
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  Rendered /Users/jpat/.rvm/gems/ruby-2.2.0@rails_decal/bundler/gems/rails_admin-482b5ac4c3b6/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (43.7ms)
+Completed 200 OK in 73ms (Views: 61.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2016-11-28 13:53:18 -0800
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (1.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered home/index.html.erb within layouts/application (15.3ms)
+  Rendered layouts/_header.html.erb (6.1ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 636ms (Views: 556.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/categories/1" for ::1 at 2016-11-28 13:53:21 -0800
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCategory Load (0.3ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mSubcategory Load (0.3ms)[0m  [1mSELECT "subcategories".* FROM "subcategories" WHERE "subcategories"."category_id" = 1[0m
+  Rendered categories/show.html.erb within layouts/application (5.5ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (9.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 190ms (Views: 185.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/subcategories/1" for ::1 at 2016-11-28 13:53:22 -0800
+Processing by SubcategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSubcategory Load (0.3ms)[0m  [1mSELECT  "subcategories".* FROM "subcategories" WHERE "subcategories"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCategory Load (0.1ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mItem Load (0.4ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."subcategory_id" = 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered subcategories/show.html.erb within layouts/application (20.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (5.7ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 116ms (Views: 112.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for ::1 at 2016-11-28 13:54:27 -0800
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (2.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCategory Load (0.6ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered home/index.html.erb within layouts/application (6.2ms)
+  Rendered layouts/_header.html.erb (5.5ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 169ms (Views: 135.9ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/categories/1" for ::1 at 2016-11-28 13:54:28 -0800
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCategory Load (0.1ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mSubcategory Load (0.4ms)[0m  [1mSELECT "subcategories".* FROM "subcategories" WHERE "subcategories"."category_id" = 1[0m
+  Rendered categories/show.html.erb within layouts/application (8.8ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (7.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 111ms (Views: 107.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/subcategories/2" for ::1 at 2016-11-28 13:54:28 -0800
+Processing by SubcategoriesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mSubcategory Load (0.2ms)[0m  [1mSELECT  "subcategories".* FROM "subcategories" WHERE "subcategories"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCategory Load (0.1ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."subcategory_id" = 2[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered subcategories/show.html.erb within layouts/application (9.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (7.4ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 92ms (Views: 89.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2016-11-28 13:54:29 -0800
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCategory Load (0.4ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered home/index.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_header.html.erb (3.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 94ms (Views: 91.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/categories/1" for ::1 at 2016-11-28 13:54:30 -0800
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCategory Load (0.2ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mSubcategory Load (0.2ms)[0m  [1mSELECT "subcategories".* FROM "subcategories" WHERE "subcategories"."category_id" = 1[0m
+  Rendered categories/show.html.erb within layouts/application (3.3ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (4.3ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 90ms (Views: 88.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/subcategories/1" for ::1 at 2016-11-28 13:54:31 -0800
+Processing by SubcategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSubcategory Load (0.7ms)[0m  [1mSELECT  "subcategories".* FROM "subcategories" WHERE "subcategories"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCategory Load (0.1ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mItem Load (0.3ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."subcategory_id" = 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered subcategories/show.html.erb within layouts/application (15.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (5.3ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 92ms (Views: 87.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/admin" for ::1 at 2016-11-28 13:54:34 -0800
+Processing by RailsAdmin::MainController#dashboard as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "carts"
+  [1m[36mCart Load (0.2ms)[0m  [1mSELECT  "carts".* FROM "carts"  ORDER BY "carts"."id" DESC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "categories"
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT  "categories".* FROM "categories"  ORDER BY "categories"."id" DESC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "items"
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT  "items".* FROM "items"  ORDER BY "items"."id" DESC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "subcategories"
+  [1m[36mSubcategory Load (0.1ms)[0m  [1mSELECT  "subcategories".* FROM "subcategories"  ORDER BY "subcategories"."id" DESC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" DESC LIMIT 1[0m
+  Rendered /Users/jpat/.rvm/gems/ruby-2.2.0@rails_decal/bundler/gems/rails_admin-482b5ac4c3b6/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (42.2ms)
+  Rendered /Users/jpat/.rvm/gems/ruby-2.2.0@rails_decal/bundler/gems/rails_admin-482b5ac4c3b6/app/views/layouts/rails_admin/_secondary_navigation.html.haml (2.0ms)
+  Rendered /Users/jpat/.rvm/gems/ruby-2.2.0@rails_decal/bundler/gems/rails_admin-482b5ac4c3b6/app/views/layouts/rails_admin/_navigation.html.haml (7.2ms)
+  Rendered /Users/jpat/.rvm/gems/ruby-2.2.0@rails_decal/bundler/gems/rails_admin-482b5ac4c3b6/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (6.8ms)
+  Rendered /Users/jpat/.rvm/gems/ruby-2.2.0@rails_decal/bundler/gems/rails_admin-482b5ac4c3b6/app/views/layouts/rails_admin/pjax.html.haml (2.9ms)
+Completed 200 OK in 376ms (Views: 356.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/admin/cart?_pjax=%5Bdata-pjax-container%5D" for ::1 at 2016-11-28 13:54:37 -0800
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"cart"}
+  [1m[35mCart Load (0.3ms)[0m  SELECT  "carts".* FROM "carts"  ORDER BY carts.id desc LIMIT 20 OFFSET 0
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "carts"[0m
+  Rendered /Users/jpat/.rvm/gems/ruby-2.2.0@rails_decal/bundler/gems/rails_admin-482b5ac4c3b6/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (66.4ms)
+Completed 200 OK in 256ms (Views: 123.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/category?_pjax=%5Bdata-pjax-container%5D" for ::1 at 2016-11-28 13:54:38 -0800
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"category"}
+  [1m[35mCategory Load (0.3ms)[0m  SELECT  "categories".* FROM "categories"  ORDER BY categories.id desc LIMIT 20 OFFSET 0
+  [1m[36mSubcategory Load (0.1ms)[0m  [1mSELECT "subcategories".* FROM "subcategories" WHERE "subcategories"."category_id" = ?[0m  [["category_id", 2]]
+  [1m[35mSubcategory Load (0.2ms)[0m  SELECT "subcategories".* FROM "subcategories" WHERE "subcategories"."category_id" = ?  [["category_id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "categories"[0m
+  Rendered /Users/jpat/.rvm/gems/ruby-2.2.0@rails_decal/bundler/gems/rails_admin-482b5ac4c3b6/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (82.7ms)
+Completed 200 OK in 145ms (Views: 123.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/admin/item?_pjax=%5Bdata-pjax-container%5D" for ::1 at 2016-11-28 13:54:38 -0800
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"item"}
+  [1m[35mItem Load (0.3ms)[0m  SELECT  "items".* FROM "items"  ORDER BY items.id desc LIMIT 20 OFFSET 0
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IN (1)[0m
+  [1m[35mSubcategory Load (0.2ms)[0m  SELECT "subcategories".* FROM "subcategories" WHERE "subcategories"."id" IN (3, 4, 2, 1)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "items"[0m
+  Rendered /Users/jpat/.rvm/gems/ruby-2.2.0@rails_decal/bundler/gems/rails_admin-482b5ac4c3b6/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (95.3ms)
+Completed 200 OK in 125ms (Views: 114.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/admin/subcategory?_pjax=%5Bdata-pjax-container%5D" for ::1 at 2016-11-28 13:54:39 -0800
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"subcategory"}
+  [1m[35mSubcategory Load (0.3ms)[0m  SELECT  "subcategories".* FROM "subcategories"  ORDER BY subcategories.id desc LIMIT 20 OFFSET 0
+  [1m[36mItem Load (0.1ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."subcategory_id" = ?[0m  [["subcategory_id", 4]]
+  [1m[35mItem Load (0.1ms)[0m  SELECT "items".* FROM "items" WHERE "items"."subcategory_id" = ?  [["subcategory_id", 3]]
+  [1m[36mItem Load (0.1ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."subcategory_id" = ?[0m  [["subcategory_id", 2]]
+  [1m[35mItem Load (0.1ms)[0m  SELECT "items".* FROM "items" WHERE "items"."subcategory_id" = ?  [["subcategory_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "subcategories"[0m
+  Rendered /Users/jpat/.rvm/gems/ruby-2.2.0@rails_decal/bundler/gems/rails_admin-482b5ac4c3b6/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (74.0ms)
+Completed 200 OK in 97ms (Views: 89.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/admin/user?_pjax=%5Bdata-pjax-container%5D" for ::1 at 2016-11-28 13:54:40 -0800
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"user"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  ORDER BY users.id desc LIMIT 20 OFFSET 0
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  Rendered /Users/jpat/.rvm/gems/ruby-2.2.0@rails_decal/bundler/gems/rails_admin-482b5ac4c3b6/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (49.3ms)
+Completed 200 OK in 78ms (Views: 68.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/cart?_pjax=%5Bdata-pjax-container%5D" for ::1 at 2016-11-28 13:54:41 -0800
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"cart"}
+  [1m[35mCart Load (0.2ms)[0m  SELECT  "carts".* FROM "carts"  ORDER BY carts.id desc LIMIT 20 OFFSET 0
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "carts"[0m
+  Rendered /Users/jpat/.rvm/gems/ruby-2.2.0@rails_decal/bundler/gems/rails_admin-482b5ac4c3b6/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (23.2ms)
+Completed 200 OK in 52ms (Views: 44.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admin/subcategory?_pjax=%5Bdata-pjax-container%5D" for ::1 at 2016-11-28 13:54:42 -0800
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"subcategory"}
+  [1m[35mSubcategory Load (0.2ms)[0m  SELECT  "subcategories".* FROM "subcategories"  ORDER BY subcategories.id desc LIMIT 20 OFFSET 0
+  [1m[36mItem Load (0.1ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."subcategory_id" = ?[0m  [["subcategory_id", 4]]
+  [1m[35mItem Load (0.1ms)[0m  SELECT "items".* FROM "items" WHERE "items"."subcategory_id" = ?  [["subcategory_id", 3]]
+  [1m[36mItem Load (0.1ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."subcategory_id" = ?[0m  [["subcategory_id", 2]]
+  [1m[35mItem Load (0.1ms)[0m  SELECT "items".* FROM "items" WHERE "items"."subcategory_id" = ?  [["subcategory_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "subcategories"[0m
+  Rendered /Users/jpat/.rvm/gems/ruby-2.2.0@rails_decal/bundler/gems/rails_admin-482b5ac4c3b6/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (76.6ms)
+Completed 200 OK in 105ms (Views: 95.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/admin/cart?_pjax=%5Bdata-pjax-container%5D" for ::1 at 2016-11-28 13:54:45 -0800
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"cart"}
+  [1m[35mCart Load (0.2ms)[0m  SELECT  "carts".* FROM "carts"  ORDER BY carts.id desc LIMIT 20 OFFSET 0
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "carts"[0m
+  Rendered /Users/jpat/.rvm/gems/ruby-2.2.0@rails_decal/bundler/gems/rails_admin-482b5ac4c3b6/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (22.6ms)
+Completed 200 OK in 50ms (Views: 42.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admin/item?_pjax=%5Bdata-pjax-container%5D" for ::1 at 2016-11-28 13:55:04 -0800
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"item"}
+  [1m[35mItem Load (0.6ms)[0m  SELECT  "items".* FROM "items"  ORDER BY items.id desc LIMIT 20 OFFSET 0
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IN (1)[0m
+  [1m[35mSubcategory Load (0.3ms)[0m  SELECT "subcategories".* FROM "subcategories" WHERE "subcategories"."id" IN (3, 4, 2, 1)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "items"[0m
+  Rendered /Users/jpat/.rvm/gems/ruby-2.2.0@rails_decal/bundler/gems/rails_admin-482b5ac4c3b6/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (127.2ms)
+Completed 200 OK in 183ms (Views: 145.6ms | ActiveRecord: 1.3ms)
