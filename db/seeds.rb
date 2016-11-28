@@ -6,7 +6,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-john = User.create(first_name: 'John', last_name: 'Smith', email: 'johnsmith@email.com', password: 'johnsmith')
+john = User.create(first_name: 'John', last_name: 'Smith', email: 'johnsmith@email.com', password: 'johnsmith', admin: true)
 clothing = Category.create(name: 'Clothing')
 food = Category.create(name: 'Food')
 #shirts = Subcategory.create(name: 'Shirts', category_id: clothing)
@@ -17,7 +17,7 @@ food = Category.create(name: 'Food')
 clothing.subcategories.create(name: 'Shirts')
 clothing.subcategories.create(name: 'Pants')
 food.subcategories.create(name: 'Fruit')
-food.subcategories.create(name: 'Vegetables')
+food.subcategories.create(name: 'Vegetables')	
 
 shirts = Subcategory.find_or_create_by(name: 'Shirts')
 pants = Subcategory.find_or_create_by(name: 'Pants')

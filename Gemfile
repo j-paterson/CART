@@ -29,6 +29,10 @@ gem 'simple_form'
 
 #Add Rails Admin
 gem 'rails_admin', github: 'sferik/rails_admin'
+
+#Add CanCanCan for authentication
+gem "cancancan"
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161126213437) do
+ActiveRecord::Schema.define(version: 20161128221208) do
 
   create_table "carts", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -59,6 +59,8 @@ ActiveRecord::Schema.define(version: 20161126213437) do
     t.integer  "cart_id"
     t.string   "first_name"
     t.string   "last_name"
+    t.boolean  "admin"
+    t.string   "role"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

@@ -1,0 +1,18 @@
+<%= link_to "All", '/' %>
+> 
+<% subcategory=Subcategory.find(@item.subcategory_id) %>
+<% category=Category.find(subcategory.category_id) %>
+<%= link_to(category) do %>
+	<%= category.name%>
+<% end %>
+>
+<%= link_to(subcategory) do %>
+	<%= subcategory.name %>
+<% end %>
+>
+<%= @item.name %>
+
+
+<%= cart_form(@item) %>
+
+<%= cart_link %>
