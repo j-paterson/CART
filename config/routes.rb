@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   resources :users
   resources :categories
   resources :subcategories
-  resource :carts, only: [:show]
+  resource :cart, only: [:show]
   resources :order_items, only: [:create, :update, :destroy]
   get 'items/new', to: 'items#new'
   post 'items/create', to: 'items#create'

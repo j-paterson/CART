@@ -4,5 +4,5 @@ class Item < ActiveRecord::Base
   validates :name, presence: true, uniqueness: true
   validates :price, presence: true
   has_many :order_items
-  default_scope { where(active: true) }
+  #default_scope { where(active: true) }
 end
