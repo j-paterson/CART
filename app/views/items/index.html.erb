@@ -1,0 +1,7 @@
+<%= button_to "Add Item", new_path, :class => "button medium", :method => :patch %>
+<% @items.each do |i| %>
+  <h4><%= i.name %></h4>
+  <p>Description: <%= i.description %></p>
+  <p>Price: <%= i.price %></p>
+  <%= button_to "Delete", delete_path(id: i), :class => "button medium", :method => :patch %>
+<% end %>

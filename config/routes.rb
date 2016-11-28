@@ -1,8 +1,15 @@
 Rails.application.routes.draw do
+  get '/cart' => 'cart#index'
+
   devise_for :users
+  resources :items
+  get 'items/new', to: 'items#new'
+  post 'items/create', to: 'items#create'
+  patch 'new', to: 'items#new'
+  patch 'delete', to: 'items#delete'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
-
+  root :to =>'home#index'
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 
