@@ -1,13 +1,22 @@
 <% if user_signed_in? %>
 
-<h3>you have succesfully signed in</h3>
-<%= link_to "View all items", '/items' %>
-<%= link_to "Sign Out", destroy_user_session_path, :method => :delete %>
+<h2>Welcome <%= current_user.first_name %>!</h2>
 
 <% else %>
 
-<h1> Welcome </h1>
-<%= link_to "Sign In", new_user_session_path, :method => :get %>
-<%= link_to "Sign up", new_user_registration_path, :method => :get %>
+<h2> Welcome! Please sign in! </h2>
 
 <% end %>
+<div class='container'>
+	<% @categories.in_groups_of(4, false).each do |group| %>
+		<div class="row categoryRow">
+		  <% group.each do |category| %>
+			<%= link_to(category) do %>
+			    <div class="box col-md-3">
+					<%= category.name %>
+				</div>
+			<% end %>
+		  <% end %>
+		</div>
+	<% end %>
+</div>

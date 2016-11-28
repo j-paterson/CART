@@ -1,0 +1,20 @@
+<header class="nav-wrapper">
+	<div class="logo md col-xs-4 col-sm-4 col-md-4">
+		<a href="/"><%= image_tag("cart.svg", :alt => "CART") %><img></a>
+		<!-- <a href="/"><img src="cart.svg"><img></a> -->
+	</div>
+	<div class="mobile-menu"></div>
+	<div class="nonmobile-menu col-sm-8 col-md-8">
+		<ul class="main-menu">
+			<% if user_signed_in? %>
+				<li><%= link_to "All Items", '/items' %></li>
+				<li><%= link_to "Profile", profile_path %></li>
+				<li><%= link_to "Sign Out", destroy_user_session_path, :method => :delete %></li>
+			<% else %>
+				<li><%= link_to "Home", '/items' %></li>
+				<li><%= link_to "Sign In", new_user_session_path, :method => :get %></li>
+				<li><%= link_to "Sign up", new_user_registration_path, :method => :get %></li>
+			<% end %>
+		</ul>
+	</div>
+</header>

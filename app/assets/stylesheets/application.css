@@ -13,3 +13,117 @@
  *= require_tree .
  *= require_self
  */
+
+/* General */
+ul{
+list-style: none;
+}
+.container{
+	padding:10px;
+}
+
+/* Navigation */
+.nav-wrapper{
+	width:100%;
+	height:48px;
+	background-color:gray;
+}
+.nav-wrapper li{
+	padding-left: 10px;
+	padding-right: 10px;
+	position:relative;
+	float:left;
+	font-weight:600;
+	height: inherit;
+}
+.nav-wrapper a{
+	color:white;
+	
+}
+.nav-wrapper li a:hover {
+	color: #06b1e1;
+	text-decoration:none
+}
+.logo img{
+	width:3em;
+}
+.main-menu{
+	float:right;
+}
+
+/* Item Display */
+
+.item{
+	margin:10px;
+	padding:10px;
+	background-color:gray;
+}
+.item-title{
+	font-weight:600;
+}
+.addButton {
+	background-color:#2dabf9;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	padding:9px 23px;
+	text-decoration:none;
+	margin: 10px 10px 0 10px;
+}
+.addButton:hover {
+	background-color:#2994d6;
+}
+.addButton:active {
+	position:relative;
+	top:1px;
+}
+
+/* Profile Display */
+
+.profileContainer ul{
+	list-style: none;
+}
+.profileContainer li{
+	text-decoration:none
+}
+
+/*  Category Display  */
+
+.categoryRow .box{
+	background-color:#bababa;
+    padding:10% 0 10% 0;
+    width:25%;
+    text-align:center;
+    font-size:2em;
+    font-weight:600;
+    margin:2%;
+}
+.categoryRow a{
+	color:white;
+}
+
+/* Subcategory Display */
+.subCategoryRow .box{
+	background-color:#bababa;
+    padding:8% 0 8% 0;
+    text-align:center;
+    font-size:2em;
+    font-weight:600;
+    margin:1%;
+    width:20%;
+}
+.subCategoryRow a{
+	color:white;
+}
+
+
+
+
+
+
+
+
+
+

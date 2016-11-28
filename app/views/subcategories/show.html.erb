@@ -1,0 +1,24 @@
+<%= link_to "All", '/' %>
+> 
+<% category=Category.find(@subcategory.category_id) %>
+<%= link_to(category) do %>
+<%= category.name%>
+<% end %>
+>
+<%= @subcategory.name %>
+
+<div class='container'>
+	<% Item.where(subcategory_id: @subcategory).in_groups_of(6, false).each do |group| %>
+	  <div class="row subCategoryRow">
+	    <% group.each do |item| %>
+	       <div class="item">
+	       		<span class="item-title"> <%= item.name %> </span>
+	       		<p>Seller: <%= item.user.email %><br>
+	       		Description: <%= item.description %><br>
+	       		Price: <%= item.price %></p>
+	       		<%= button_to "Delete", delete_path(id: item), :class => "button medium", :method => :patch %>
+	       	</div>
+	    <% end %>
+	  </div>
+	<% end %>
+</div>

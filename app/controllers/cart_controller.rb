@@ -1,4 +1,4 @@
-class CartController < ApplicationController
+ class CartController < ApplicationController
   def index
   end
 
