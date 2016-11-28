@@ -33,6 +33,9 @@ gem 'rails_admin', github: 'sferik/rails_admin'
 #Add CanCanCan for authentication
 gem "cancancan"
 
+#Add Piggybak for cart
+gem "piggybak"
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

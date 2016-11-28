@@ -41,6 +41,11 @@ GEM
     activejob (4.2.6)
       activesupport (= 4.2.6)
       globalid (>= 0.3.0)
+    activemerchant (1.61.0)
+      activesupport (>= 3.2.14, < 5.1)
+      builder (>= 2.1.2, < 4.0.0)
+      i18n (>= 0.6.9)
+      nokogiri (~> 1.4)
     activemodel (4.2.6)
       activesupport (= 4.2.6)
       builder (~> 3.1)
@@ -74,6 +79,10 @@ GEM
       execjs
     coffee-script-source (1.10.0)
     concurrent-ruby (1.0.2)
+    countries (1.2.5)
+      currencies (~> 0.4.2)
+      i18n_data (~> 0.7.0)
+    currencies (0.4.2)
     debug_inspector (0.0.2)
     devise (3.5.2)
       bcrypt (~> 3.0)
@@ -91,6 +100,7 @@ GEM
     haml (4.0.7)
       tilt
     i18n (0.7.0)
+    i18n_data (0.7.0)
     jbuilder (2.6.0)
       activesupport (>= 3.0.0, < 5.1)
       multi_json (~> 1.2)
@@ -118,10 +128,17 @@ GEM
     nokogiri (1.6.8.1)
       mini_portile2 (~> 2.1.0)
     orm_adapter (0.5.0)
+    piggybak (0.7.7)
+      activemerchant
+      countries (~> 1.2.2)
+      devise
+      rack-ssl-enforcer
+      rails_admin
     rack (1.6.4)
     rack-pjax (1.0.0)
       nokogiri (~> 1.5)
       rack (>= 1.1)
+    rack-ssl-enforcer (0.2.9)
     rack-test (0.6.3)
       rack (>= 1.0)
     rails (4.2.6)
@@ -205,6 +222,7 @@ DEPENDENCIES
   devise
   jbuilder (~> 2.0)
   jquery-rails
+  piggybak
   rails (= 4.2.6)
   rails_admin!
   sass-rails (~> 5.0)

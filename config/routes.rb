@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
+  devise_for :users
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   get '/cart' => 'cart#index'
 
-  devise_for :users, :controllers => { registrations: 'registrations' }
+  # devise_for :users, :controllers => { registrations: 'registrations' }, except: :
   resources :items
-  resources :users
+  resources :users, except: :new
   resources :categories
   resources :subcategories
   get 'items/new', to: 'items#new'
