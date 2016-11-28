@@ -16482,3 +16482,289 @@ Processing by SubcategoriesController#show as HTML
   Rendered layouts/_header.html.erb (3.5ms)
   Rendered layouts/_footer.html.erb (0.0ms)
 Completed 200 OK in 294ms (Views: 290.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for ::1 at 2016-11-28 12:41:43 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  [1m[35mCategory Load (0.5ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered home/index.html.erb within layouts/application (20.3ms)
+  Rendered layouts/_header.html.erb (3.3ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 1023ms (Views: 976.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-11-28 12:41:47 -0800
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"N6zhfZ2ksW5K6o0Ldu13ARQMT5Rs9PM1M3HVQA4/2kgXfpkcaMJqefyXMlaQoRb4GJGtI0hMVpDHygg/eU4hkA=="}
+  Rendered devise/shared/_links.html.erb (2.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (468.4ms)
+  Rendered layouts/_header.html.erb (1.6ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 539ms (Views: 521.1ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2016-11-28 12:42:00 -0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mBYErxz+z1rNbuo4+dRbLeDoluSeL4AVGfa35HlaslC4xHzO6ZgUTXsTVWUfmDrU7HV0U7qXJbDtTWqbDitJiA==", "user"=>{"email"=>"johnsmith@email.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "johnsmith@email.com"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "users" SET "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2016-11-28 20:42:01.074117"], ["sign_in_count", 2], ["updated_at", "2016-11-28 20:42:01.075865"], ["id", 1]]
+  [1m[35m (12.5ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 234ms (ActiveRecord: 14.3ms)
+
+
+Started GET "/" for ::1 at 2016-11-28 12:42:01 -0800
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered home/index.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_header.html.erb (3.7ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 72ms (Views: 68.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/profile" for ::1 at 2016-11-28 12:42:04 -0800
+Processing by UsersController#profile as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered users/profile.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_header.html.erb (3.3ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 80ms (Views: 76.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/categories/2" for ::1 at 2016-11-28 12:42:06 -0800
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mCategory Load (0.7ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mSubcategory Load (0.6ms)[0m  [1mSELECT "subcategories".* FROM "subcategories" WHERE "subcategories"."category_id" = 2[0m
+  Rendered categories/show.html.erb within layouts/application (26.4ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (4.4ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 114ms (Views: 97.0ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/categories/1" for ::1 at 2016-11-28 12:42:08 -0800
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mSubcategory Load (0.3ms)[0m  SELECT "subcategories".* FROM "subcategories" WHERE "subcategories"."category_id" = 1
+  Rendered categories/show.html.erb within layouts/application (3.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (2.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 76ms (Views: 73.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/profile" for ::1 at 2016-11-28 12:42:10 -0800
+Processing by UsersController#profile as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered users/profile.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_header.html.erb (2.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 73ms (Views: 70.1ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2016-11-28 12:42:13 -0800
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"cl4EjDp2pGB+VVk+AgqkToqg7QiQeQuVtgYU07ny5pTBtpM+ClpL8CwJhbrMGUVmyZnPZ2H+zCjvkrawKNRclQ=="}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 18ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-11-28 12:42:13 -0800
+Processing by HomeController#index as HTML
+  [1m[35mCategory Load (1.8ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered home/index.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_header.html.erb (3.0ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 65ms (Views: 61.8ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/items" for ::1 at 2016-11-28 12:42:17 -0800
+Processing by ItemsController#index as HTML
+  [1m[36mItem Load (0.8ms)[0m  [1mSELECT "items".* FROM "items"[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered items/index.html.erb within layouts/application (90.8ms)
+  Rendered layouts/_header.html.erb (2.3ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 134ms (Views: 131.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for ::1 at 2016-11-28 12:42:18 -0800
+Processing by HomeController#index as HTML
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered home/index.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_header.html.erb (3.5ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 85ms (Views: 83.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/categories/1" for ::1 at 2016-11-28 12:42:19 -0800
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mSubcategory Load (0.5ms)[0m  SELECT "subcategories".* FROM "subcategories" WHERE "subcategories"."category_id" = 1
+  Rendered categories/show.html.erb within layouts/application (3.5ms)
+  Rendered layouts/_header.html.erb (3.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 101ms (Views: 94.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/subcategories/2" for ::1 at 2016-11-28 12:42:21 -0800
+Processing by SubcategoriesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mSubcategory Load (0.7ms)[0m  [1mSELECT  "subcategories".* FROM "subcategories" WHERE "subcategories"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCategory Load (0.1ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."subcategory_id" = 2[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered subcategories/show.html.erb within layouts/application (5.7ms)
+  Rendered layouts/_header.html.erb (1.8ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 87ms (Views: 81.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/categories/1" for ::1 at 2016-11-28 12:42:22 -0800
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mSubcategory Load (0.2ms)[0m  SELECT "subcategories".* FROM "subcategories" WHERE "subcategories"."category_id" = 1
+  Rendered categories/show.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_header.html.erb (3.3ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 115ms (Views: 112.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2016-11-28 12:42:23 -0800
+Processing by HomeController#index as HTML
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered home/index.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_header.html.erb (2.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 91ms (Views: 86.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-11-28 12:42:24 -0800
+Processing by HomeController#index as HTML
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered home/index.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_header.html.erb (2.5ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 73ms (Views: 71.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2016-11-28 12:48:37 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered home/index.html.erb within layouts/application (9.5ms)
+  Rendered layouts/_header.html.erb (3.8ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 805ms (Views: 763.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2016-11-28 12:48:44 -0800
+Processing by HomeController#index as HTML
+  [1m[36mCategory Load (0.6ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered home/index.html.erb within layouts/application (4.5ms)
+  Rendered layouts/_header.html.erb (1.8ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 47ms (Views: 42.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/categories/1" for ::1 at 2016-11-28 12:48:45 -0800
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCategory Load (0.3ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mSubcategory Load (0.6ms)[0m  [1mSELECT "subcategories".* FROM "subcategories" WHERE "subcategories"."category_id" = 1[0m
+  Rendered categories/show.html.erb within layouts/application (11.0ms)
+  Rendered layouts/_header.html.erb (1.6ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 96ms (Views: 53.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/categories/2" for ::1 at 2016-11-28 12:48:48 -0800
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mCategory Load (0.1ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mSubcategory Load (0.2ms)[0m  [1mSELECT "subcategories".* FROM "subcategories" WHERE "subcategories"."category_id" = 2[0m
+  Rendered categories/show.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_header.html.erb (2.5ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 113ms (Views: 111.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/subcategories/4" for ::1 at 2016-11-28 12:48:48 -0800
+Processing by SubcategoriesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mSubcategory Load (0.3ms)[0m  SELECT  "subcategories".* FROM "subcategories" WHERE "subcategories"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mItem Load (0.5ms)[0m  SELECT "items".* FROM "items" WHERE "items"."subcategory_id" = 4
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered subcategories/show.html.erb within layouts/application (67.4ms)
+  Rendered layouts/_header.html.erb (3.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 133ms (Views: 126.9ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/categories/2" for ::1 at 2016-11-28 12:48:50 -0800
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mCategory Load (0.1ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mSubcategory Load (0.3ms)[0m  [1mSELECT "subcategories".* FROM "subcategories" WHERE "subcategories"."category_id" = 2[0m
+  Rendered categories/show.html.erb within layouts/application (3.4ms)
+  Rendered layouts/_header.html.erb (1.8ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 92ms (Views: 88.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2016-11-28 12:48:51 -0800
+Processing by HomeController#index as HTML
+  [1m[35mCategory Load (0.3ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered home/index.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_header.html.erb (3.3ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 86ms (Views: 84.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-11-28 12:48:52 -0800
+Processing by HomeController#index as HTML
+  [1m[36mCategory Load (0.6ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered home/index.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_header.html.erb (2.7ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 81ms (Views: 79.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/items" for ::1 at 2016-11-28 12:48:53 -0800
+Processing by ItemsController#index as HTML
+  [1m[35mItem Load (0.3ms)[0m  SELECT "items".* FROM "items"
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered items/index.html.erb within layouts/application (24.0ms)
+  Rendered layouts/_header.html.erb (2.3ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 75ms (Views: 73.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2016-11-28 12:48:55 -0800
+Processing by HomeController#index as HTML
+  [1m[36mCategory Load (0.5ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered home/index.html.erb within layouts/application (4.8ms)
+  Rendered layouts/_header.html.erb (2.7ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 90ms (Views: 87.0ms | ActiveRecord: 0.5ms)
