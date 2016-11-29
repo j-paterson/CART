@@ -1,7 +1,9 @@
-== PROJECT WRITEUP
+# PROJECT WRITEUP
 
 Title: CART
+
 Team Members: Jesse Paterson, Evey Huang, Chris Lin, Liam Leahy
+
 Demo Link: https://drive.google.com/open?id=0B-TEa0hPu-aGR3VRMnY5ZVNLTVU
 
 Idea: An application where users can post items that they want to sell as well as purchase other people's items.
