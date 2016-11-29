@@ -12,13 +12,16 @@ Idea: An application where users can post items that they want to sell as well a
 User
 * has email, password, a cart, and multiple items for sales
 * certain Users are Administrators and can edit the database
+
 Item
 * has name, description, and price
 * each item belongs to a User
 * each item belongs to a Category
+
 Cart
 * each User has a Cart, and each Cart belongs to a User
 * each Cart can contain multiple items for sales
+
 Category
 * has name
 * has many Items
