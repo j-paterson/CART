@@ -23307,3 +23307,124 @@ Processing by RailsAdmin::MainController#index as HTML
   [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "users" WHERE ('t'='t')
   Rendered /Users/jpat/.rvm/gems/ruby-2.2.0@rails_decal/bundler/gems/rails_admin-482b5ac4c3b6/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (34.3ms)
 Completed 200 OK in 68ms (Views: 53.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/category?_pjax=%5Bdata-pjax-container%5D" for ::1 at 2016-11-28 17:35:39 -0800
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"category"}
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCategory Load (0.4ms)[0m  SELECT  "categories".* FROM "categories" WHERE ('t'='t')  ORDER BY categories.id desc LIMIT 20 OFFSET 0
+  [1m[36mSubcategory Load (0.2ms)[0m  [1mSELECT "subcategories".* FROM "subcategories" WHERE "subcategories"."category_id" = ?[0m  [["category_id", 2]]
+  [1m[35mSubcategory Load (0.1ms)[0m  SELECT "subcategories".* FROM "subcategories" WHERE "subcategories"."category_id" = ?  [["category_id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "categories" WHERE ('t'='t')[0m
+  Rendered /Users/jpat/.rvm/gems/ruby-2.2.0@rails_decal/bundler/gems/rails_admin-482b5ac4c3b6/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (85.3ms)
+Completed 200 OK in 212ms (Views: 118.5ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/admin/item?_pjax=%5Bdata-pjax-container%5D" for ::1 at 2016-11-28 17:35:40 -0800
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"item"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mItem Load (0.4ms)[0m  [1mSELECT  "items".* FROM "items" WHERE ('t'='t')  ORDER BY items.id desc LIMIT 20 OFFSET 0[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IN (1)
+  [1m[36mSubcategory Load (0.9ms)[0m  [1mSELECT "subcategories".* FROM "subcategories" WHERE "subcategories"."id" IN (3, 4, 2, 1)[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "items" WHERE ('t'='t')
+  Rendered /Users/jpat/.rvm/gems/ruby-2.2.0@rails_decal/bundler/gems/rails_admin-482b5ac4c3b6/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (100.1ms)
+Completed 200 OK in 141ms (Views: 110.5ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/admin/order?_pjax=%5Bdata-pjax-container%5D" for ::1 at 2016-11-28 17:35:41 -0800
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"order"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mOrder Load (0.3ms)[0m  SELECT  "orders".* FROM "orders" WHERE ('t'='t')  ORDER BY orders.id desc LIMIT 20 OFFSET 0
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "orders" WHERE ('t'='t')[0m
+  Rendered /Users/jpat/.rvm/gems/ruby-2.2.0@rails_decal/bundler/gems/rails_admin-482b5ac4c3b6/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (22.0ms)
+Completed 200 OK in 58ms (Views: 45.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/admin/order_item?_pjax=%5Bdata-pjax-container%5D" for ::1 at 2016-11-28 17:35:41 -0800
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"order_item"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mOrderItem Load (0.2ms)[0m  [1mSELECT  "order_items".* FROM "order_items" WHERE ('t'='t')  ORDER BY order_items.id desc LIMIT 20 OFFSET 0[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "order_items" WHERE ('t'='t')
+  Rendered /Users/jpat/.rvm/gems/ruby-2.2.0@rails_decal/bundler/gems/rails_admin-482b5ac4c3b6/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (24.5ms)
+Completed 200 OK in 72ms (Views: 37.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/order_status?_pjax=%5Bdata-pjax-container%5D" for ::1 at 2016-11-28 17:35:42 -0800
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"order_status"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mOrderStatus Load (0.3ms)[0m  SELECT  "order_statuses".* FROM "order_statuses" WHERE ('t'='t')  ORDER BY order_statuses.id desc LIMIT 20 OFFSET 0
+  [1m[36mOrder Load (0.2ms)[0m  [1mSELECT "orders".* FROM "orders" WHERE "orders"."order_status_id" = ?[0m  [["order_status_id", 4]]
+  [1m[35mOrder Load (0.1ms)[0m  SELECT "orders".* FROM "orders" WHERE "orders"."order_status_id" = ?  [["order_status_id", 3]]
+  [1m[36mOrder Load (0.1ms)[0m  [1mSELECT "orders".* FROM "orders" WHERE "orders"."order_status_id" = ?[0m  [["order_status_id", 2]]
+  [1m[35mOrder Load (0.1ms)[0m  SELECT "orders".* FROM "orders" WHERE "orders"."order_status_id" = ?  [["order_status_id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "order_statuses" WHERE ('t'='t')[0m
+  Rendered /Users/jpat/.rvm/gems/ruby-2.2.0@rails_decal/bundler/gems/rails_admin-482b5ac4c3b6/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (118.9ms)
+Completed 200 OK in 157ms (Views: 141.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/admin/subcategory?_pjax=%5Bdata-pjax-container%5D" for ::1 at 2016-11-28 17:35:43 -0800
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"subcategory"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mSubcategory Load (0.2ms)[0m  [1mSELECT  "subcategories".* FROM "subcategories" WHERE ('t'='t')  ORDER BY subcategories.id desc LIMIT 20 OFFSET 0[0m
+  [1m[35mItem Load (0.1ms)[0m  SELECT "items".* FROM "items" WHERE "items"."subcategory_id" = ?  [["subcategory_id", 4]]
+  [1m[36mItem Load (0.1ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."subcategory_id" = ?[0m  [["subcategory_id", 3]]
+  [1m[35mItem Load (0.1ms)[0m  SELECT "items".* FROM "items" WHERE "items"."subcategory_id" = ?  [["subcategory_id", 2]]
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."subcategory_id" = ?[0m  [["subcategory_id", 1]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "subcategories" WHERE ('t'='t')
+  Rendered /Users/jpat/.rvm/gems/ruby-2.2.0@rails_decal/bundler/gems/rails_admin-482b5ac4c3b6/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (72.1ms)
+Completed 200 OK in 110ms (Views: 97.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/admin/user?_pjax=%5Bdata-pjax-container%5D" for ::1 at 2016-11-28 17:35:44 -0800
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"user"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE ('t'='t')  ORDER BY users.id desc LIMIT 20 OFFSET 0
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE ('t'='t')[0m
+  Rendered /Users/jpat/.rvm/gems/ruby-2.2.0@rails_decal/bundler/gems/rails_admin-482b5ac4c3b6/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (60.5ms)
+Completed 200 OK in 103ms (Views: 83.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/category?_pjax=%5Bdata-pjax-container%5D" for ::1 at 2016-11-28 17:35:45 -0800
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"category"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE ('t'='t')  ORDER BY categories.id desc LIMIT 20 OFFSET 0[0m
+  [1m[35mSubcategory Load (0.1ms)[0m  SELECT "subcategories".* FROM "subcategories" WHERE "subcategories"."category_id" = ?  [["category_id", 2]]
+  [1m[36mSubcategory Load (0.1ms)[0m  [1mSELECT "subcategories".* FROM "subcategories" WHERE "subcategories"."category_id" = ?[0m  [["category_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "categories" WHERE ('t'='t')
+  Rendered /Users/jpat/.rvm/gems/ruby-2.2.0@rails_decal/bundler/gems/rails_admin-482b5ac4c3b6/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (42.4ms)
+Completed 200 OK in 73ms (Views: 59.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/category" for ::1 at 2016-11-28 17:38:37 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"category"}
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE ('t'='t')  ORDER BY categories.id desc LIMIT 20 OFFSET 0[0m
+  [1m[35mSubcategory Load (0.7ms)[0m  SELECT "subcategories".* FROM "subcategories" WHERE "subcategories"."category_id" = ?  [["category_id", 2]]
+  [1m[36mSubcategory Load (0.2ms)[0m  [1mSELECT "subcategories".* FROM "subcategories" WHERE "subcategories"."category_id" = ?[0m  [["category_id", 1]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "categories" WHERE ('t'='t')
+  Rendered /Users/jpat/.rvm/gems/ruby-2.2.0@rails_decal/bundler/gems/rails_admin-482b5ac4c3b6/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application (169.9ms)
+  Rendered /Users/jpat/.rvm/gems/ruby-2.2.0@rails_decal/bundler/gems/rails_admin-482b5ac4c3b6/app/views/layouts/rails_admin/_secondary_navigation.html.haml (8.9ms)
+  Rendered /Users/jpat/.rvm/gems/ruby-2.2.0@rails_decal/bundler/gems/rails_admin-482b5ac4c3b6/app/views/layouts/rails_admin/_navigation.html.haml (17.3ms)
+  Rendered /Users/jpat/.rvm/gems/ruby-2.2.0@rails_decal/bundler/gems/rails_admin-482b5ac4c3b6/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (26.2ms)
+  Rendered /Users/jpat/.rvm/gems/ruby-2.2.0@rails_decal/bundler/gems/rails_admin-482b5ac4c3b6/app/views/layouts/rails_admin/pjax.html.haml (16.3ms)
+Completed 200 OK in 2447ms (Views: 2071.0ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/admin/cart?_pjax=%5Bdata-pjax-container%5D" for ::1 at 2016-11-28 17:38:42 -0800
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"cart"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCart Load (0.3ms)[0m  SELECT  "carts".* FROM "carts" WHERE ('t'='t')  ORDER BY carts.id desc LIMIT 20 OFFSET 0
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "carts" WHERE ('t'='t')[0m
+  Rendered /Users/jpat/.rvm/gems/ruby-2.2.0@rails_decal/bundler/gems/rails_admin-482b5ac4c3b6/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (27.6ms)
+Completed 200 OK in 71ms (Views: 44.5ms | ActiveRecord: 0.9ms)
