@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   get '/cart' => 'carts#show'
 
-  get 'carts/show'
+  get 'cart/show'
 
   get 'order_items/create'
 

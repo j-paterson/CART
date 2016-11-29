@@ -1,5 +1,6 @@
 class CartsController < ApplicationController
   def show
-    @order_items = current_order.order_items
+    @current_cart = self
+    @order_items = Order.where(cart: @current_cart).first.order_items
   end
 end

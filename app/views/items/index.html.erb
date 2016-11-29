@@ -1,13 +1,5 @@
 <%= button_to "Add Item", new_path, :class => "addButton", :method => :patch %>
-<!-- <% @items.each do |i| %>
-	<div class="item">
-		<span class="item-title"> <%= i.name %> </span>
-		<p>Seller: <%= i.user.email %><br>
-		Description: <%= i.description %><br>
-		Price: <%= i.price %></p>
-		<%= button_to "Delete", delete_path(id: i), :class => "button medium", :method => :patch %>
-	</div> -->
-	<!-- <% end %> -->
+
 <div class="row">
   <div class="col-xs-6 col-xs-offset-3">
     <% @items.each do |item| %>

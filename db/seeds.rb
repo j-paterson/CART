@@ -7,6 +7,9 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 john = User.create(first_name: 'John', last_name: 'Smith', email: 'johnsmith@email.com', password: 'johnsmith', admin: true)
+john_cart = Cart.find_or_create_by(user: john)
+Order.find_or_create_by(cart: john_cart)
+
 clothing = Category.create(name: 'Clothing')
 food = Category.create(name: 'Food')
 #shirts = Subcategory.create(name: 'Shirts', category_id: clothing)

@@ -13,13 +13,14 @@
 				<li><%= link_to "All Items", '/items' %></li>
 				<li><%= link_to "Profile", profile_path %></li>
 				<li><%= link_to "Sign Out", destroy_user_session_path, :method => :delete %></li>
+				<li>
+				<% user_order = current_user.cart.order%>
+				<%= link_to "#{user_order.order_items.size} Items in Cart ( #{number_to_currency user_order.subtotal} )", cart_path, class: "btn btn-link" %></li>
 			<% else %>
 				<li><%= link_to "All Items", '/items' %></li>
 				<li><%= link_to "Sign In", new_user_session_path, :method => :get %></li>
 				<li><%= link_to "Sign up", new_user_registration_path, :method => :get %></li>
 			<% end %>
-
-			<li><%= link_to "#{current_order.order_items.size} Items in Cart ( #{number_to_currency current_order.subtotal} )", cart_path, class: "btn btn-link" %></li>
 		</ul>
 	</div>
 </header>
