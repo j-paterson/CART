@@ -1,5 +1,5 @@
 <%= link_to "All", '/' %>
-> 
+>
 <% category=Category.find(@subcategory.category_id) %>
 <%= link_to(category) do %>
 <%= category.name%>
@@ -16,6 +16,9 @@
 	       		<p>Seller: <%= item.user.email %><br>
 	       		Description: <%= item.description %><br>
 	       		Price: <%= item.price %></p>
+						
+						<%= button_to "Add to Cart", cart_path(id: item), :class => "btn btn-primary", :method => :patch %>
+
 	       		<%= button_to "Delete", delete_path(id: item), :class => "button medium", :method => :patch %>
 	       	</div>
 	    <% end %>
